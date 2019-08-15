@@ -1,5 +1,5 @@
 class Patient 
-  attr_reader :name, :appointment, :doctor
+  attr_accessor :name, :appointment, :doctor
   @@all = []
   
   def initialize(name)
@@ -12,6 +12,7 @@ class Patient
   end
   
   def new_appointment(doctor, date)
+    binding.pry
     Appointment.new(doctor, self, date)
   end 
   
